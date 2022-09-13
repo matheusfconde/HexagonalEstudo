@@ -1,0 +1,23 @@
+C:\_estudos\Microservicos com Hexagonal Architecture DDD TDD CQRS SOLID\HotelBooking\BookingService\Core\Domain\bin\Debug\net6.0\Domain.deps.json
+C:\_estudos\Microservicos com Hexagonal Architecture DDD TDD CQRS SOLID\HotelBooking\BookingService\Core\Domain\bin\Debug\net6.0\Domain.dll
+C:\_estudos\Microservicos com Hexagonal Architecture DDD TDD CQRS SOLID\HotelBooking\BookingService\Core\Domain\bin\Debug\net6.0\ref\Domain.dll
+C:\_estudos\Microservicos com Hexagonal Architecture DDD TDD CQRS SOLID\HotelBooking\BookingService\Core\Domain\bin\Debug\net6.0\Domain.pdb
+C:\_estudos\Microservicos com Hexagonal Architecture DDD TDD CQRS SOLID\HotelBooking\BookingService\Core\Domain\obj\Debug\net6.0\Domain.csproj.AssemblyReference.cache
+C:\_estudos\Microservicos com Hexagonal Architecture DDD TDD CQRS SOLID\HotelBooking\BookingService\Core\Domain\obj\Debug\net6.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\_estudos\Microservicos com Hexagonal Architecture DDD TDD CQRS SOLID\HotelBooking\BookingService\Core\Domain\obj\Debug\net6.0\Domain.AssemblyInfoInputs.cache
+C:\_estudos\Microservicos com Hexagonal Architecture DDD TDD CQRS SOLID\HotelBooking\BookingService\Core\Domain\obj\Debug\net6.0\Domain.AssemblyInfo.cs
+C:\_estudos\Microservicos com Hexagonal Architecture DDD TDD CQRS SOLID\HotelBooking\BookingService\Core\Domain\obj\Debug\net6.0\Domain.csproj.CoreCompileInputs.cache
+C:\_estudos\Microservicos com Hexagonal Architecture DDD TDD CQRS SOLID\HotelBooking\BookingService\Core\Domain\obj\Debug\net6.0\Domain.dll
+C:\_estudos\Microservicos com Hexagonal Architecture DDD TDD CQRS SOLID\HotelBooking\BookingService\Core\Domain\obj\Debug\net6.0\ref\Domain.dll
+C:\_estudos\Microservicos com Hexagonal Architecture DDD TDD CQRS SOLID\HotelBooking\BookingService\Core\Domain\obj\Debug\net6.0\Domain.pdb
+C:\_estudos\HexagonalUdemy\HotelBooking\BookingService\Core\Domain\bin\Debug\net6.0\Domain.deps.json
+C:\_estudos\HexagonalUdemy\HotelBooking\BookingService\Core\Domain\bin\Debug\net6.0\Domain.dll
+C:\_estudos\HexagonalUdemy\HotelBooking\BookingService\Core\Domain\bin\Debug\net6.0\ref\Domain.dll
+C:\_estudos\HexagonalUdemy\HotelBooking\BookingService\Core\Domain\bin\Debug\net6.0\Domain.pdb
+C:\_estudos\HexagonalUdemy\HotelBooking\BookingService\Core\Domain\obj\Debug\net6.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\_estudos\HexagonalUdemy\HotelBooking\BookingService\Core\Domain\obj\Debug\net6.0\Domain.AssemblyInfoInputs.cache
+C:\_estudos\HexagonalUdemy\HotelBooking\BookingService\Core\Domain\obj\Debug\net6.0\Domain.AssemblyInfo.cs
+C:\_estudos\HexagonalUdemy\HotelBooking\BookingService\Core\Domain\obj\Debug\net6.0\Domain.csproj.CoreCompileInputs.cache
+C:\_estudos\HexagonalUdemy\HotelBooking\BookingService\Core\Domain\obj\Debug\net6.0\Domain.dll
+C:\_estudos\HexagonalUdemy\HotelBooking\BookingService\Core\Domain\obj\Debug\net6.0\ref\Domain.dll
+C:\_estudos\HexagonalUdemy\HotelBooking\BookingService\Core\Domain\obj\Debug\net6.0\Domain.pdb

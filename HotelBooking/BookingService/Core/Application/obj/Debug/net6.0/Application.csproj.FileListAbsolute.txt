@@ -1,0 +1,12 @@
+C:\_estudos\Microservicos com Hexagonal Architecture DDD TDD CQRS SOLID\HotelBooking\BookingService\Core\Application\bin\Debug\net6.0\Application.deps.json
+C:\_estudos\Microservicos com Hexagonal Architecture DDD TDD CQRS SOLID\HotelBooking\BookingService\Core\Application\bin\Debug\net6.0\Application.dll
+C:\_estudos\Microservicos com Hexagonal Architecture DDD TDD CQRS SOLID\HotelBooking\BookingService\Core\Application\bin\Debug\net6.0\ref\Application.dll
+C:\_estudos\Microservicos com Hexagonal Architecture DDD TDD CQRS SOLID\HotelBooking\BookingService\Core\Application\bin\Debug\net6.0\Application.pdb
+C:\_estudos\Microservicos com Hexagonal Architecture DDD TDD CQRS SOLID\HotelBooking\BookingService\Core\Application\obj\Debug\net6.0\Application.csproj.AssemblyReference.cache
+C:\_estudos\Microservicos com Hexagonal Architecture DDD TDD CQRS SOLID\HotelBooking\BookingService\Core\Application\obj\Debug\net6.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\_estudos\Microservicos com Hexagonal Architecture DDD TDD CQRS SOLID\HotelBooking\BookingService\Core\Application\obj\Debug\net6.0\Application.AssemblyInfoInputs.cache
+C:\_estudos\Microservicos com Hexagonal Architecture DDD TDD CQRS SOLID\HotelBooking\BookingService\Core\Application\obj\Debug\net6.0\Application.AssemblyInfo.cs
+C:\_estudos\Microservicos com Hexagonal Architecture DDD TDD CQRS SOLID\HotelBooking\BookingService\Core\Application\obj\Debug\net6.0\Application.csproj.CoreCompileInputs.cache
+C:\_estudos\Microservicos com Hexagonal Architecture DDD TDD CQRS SOLID\HotelBooking\BookingService\Core\Application\obj\Debug\net6.0\Application.dll
+C:\_estudos\Microservicos com Hexagonal Architecture DDD TDD CQRS SOLID\HotelBooking\BookingService\Core\Application\obj\Debug\net6.0\ref\Application.dll
+C:\_estudos\Microservicos com Hexagonal Architecture DDD TDD CQRS SOLID\HotelBooking\BookingService\Core\Application\obj\Debug\net6.0\Application.pdb
