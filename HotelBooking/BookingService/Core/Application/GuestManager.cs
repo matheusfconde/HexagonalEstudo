@@ -61,12 +61,33 @@ namespace Application
             catch (Exception)
             {
                 return new GuestResponse
-                {                    
+                {
                     Success = false,
                     ErrorCode = ErrorCodes.COULD_NOT_STORE_DATA,
                     Message = "There was an error when saving to DB"
                 };
             }
+        }
+
+        public async Task<GuestResponse> GetGuest(int guestId)
+        {
+            var guest = await _guestRepository.Get(guestId);
+
+            if (guest == null)
+            {
+                return new GuestResponse
+                {
+                    Success = false,
+                    ErrorCode = ErrorCodes.GUEST_NOT_FOUND,
+                    Message = "No Guest Record was found with the given Id"
+                };
+            }
+
+            return new GuestResponse
+            {
+                Data = GuestDTO.MapToDto(guest),
+                Success = true
+            };
         }
     }
 }
