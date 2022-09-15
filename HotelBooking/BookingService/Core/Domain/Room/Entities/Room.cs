@@ -1,4 +1,6 @@
-﻿using Domain.ValueObjects;
+﻿using Domain.DomainExceptions;
+using Domain.Ports;
+using Domain.ValueObjects;
 
 namespace Domain.Entities
 {
@@ -25,6 +27,24 @@ namespace Domain.Entities
         {
             //verificar se existem Bookings abertos para esta Room
             get { return true; }
+        }
+
+        public void ValidateState()
+        {
+            if(String.IsNullOrEmpty(this.Name))
+            {
+                throw new InvalidRoomDataException();
+            }
+        }
+
+        public async Task Save(IRoomRepository roomRepository)
+        {
+            this.ValidateState();
+
+            if(this.Id == 0)
+            {
+                this.Id = await roomRepository.Create(this);
+            }
         }
     }
 }
