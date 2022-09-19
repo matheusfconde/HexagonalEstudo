@@ -11,19 +11,19 @@ namespace Domain.Entities
         public string Name { get; set; }
         public string Surname { get; set; }
         public string Email { get; set; }
-        public PersonId DocumentId  { get; set; }
-       
+        public PersonId DocumentId { get; set; }
+
         private void ValidadeState()
         {
-            if(DocumentId == null ||
+            if (DocumentId == null ||
                 string.IsNullOrEmpty(DocumentId.IdNumber) ||
-                DocumentId.IdNumber.Length<=3 ||
+                DocumentId.IdNumber.Length <= 3 ||
                 DocumentId.DocumentType == 0)
             {
                 throw new InvalidPersonDocumentIdException();
             }
 
-            if(string.IsNullOrEmpty(Name)||
+            if (string.IsNullOrEmpty(Name) ||
                 string.IsNullOrEmpty(Surname) ||
                 string.IsNullOrEmpty(Email))
             {
@@ -36,18 +36,23 @@ namespace Domain.Entities
             }
         }
 
+        public bool IsValid()
+        {
+            this.ValidadeState();
+            return true;
+        }
         public async Task Save(IGuestRepository guestRepository)
         {
             this.ValidadeState();
 
-            if(this.Id == 0)
+            if (this.Id == 0)
             {
                 this.Id = await guestRepository.Create(this);
             }
-            else 
+            else
             {
                 //await guestRepository.Update(this);
-            }            
+            }
         }
     }
 }

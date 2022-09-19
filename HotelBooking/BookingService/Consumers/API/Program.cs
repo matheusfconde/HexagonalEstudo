@@ -1,11 +1,15 @@
 using Application;
+using Application.Booking;
+using Application.Booking.Ports;
 using Application.Guest.Ports;
 using Application.Room.Ports;
 using Data;
+using Data.Booking;
 using Data.Guest;
 using Data.Room;
 using Domain.Ports;
 using Microsoft.EntityFrameworkCore;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +22,8 @@ builder.Services.AddScoped<IGuestManager, GuestManager>();
 builder.Services.AddScoped<IGuestRepository, GuestRepository>();
 builder.Services.AddScoped<IRoomManager, RoomManager>();
 builder.Services.AddScoped<IRoomRepository, RoomRepository>();
+builder.Services.AddScoped<IBookingManager, BookingManager>();
+builder.Services.AddScoped<IBookingRepository, BookingRepository>();
 
 #endregion
 
