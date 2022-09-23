@@ -10,16 +10,26 @@ namespace Application.Booking
     public class BookingManager : IBookingManager
     {
         private readonly IBookingRepository _bookingRepository;
-        public BookingManager(IBookingRepository bookingRepository)
+        private readonly IRoomRepository _roomRepository;
+        private readonly IGuestRepository _guestRepository ;
+
+        public BookingManager(IBookingRepository bookingRepository,
+            IRoomRepository roomRepository,
+            IGuestRepository guestRepository)
         {
             _bookingRepository = bookingRepository;
+            _roomRepository = roomRepository;
+            _guestRepository = guestRepository;
         }
+
         //TO DO TRATAR TODAS EXCEPTIONS
         public async Task<BookingResponse> CreateBooking(BookingDTO bookingDTO)
         {
             try
             {
                 var booking = BookingDTO.MapToEntity(bookingDTO);
+                booking.Guest = await _guestRepository.Get(bookingDTO.GuestId);
+                booking.Room = await _roomRepository.GetAggreagate(bookingDTO.RoomId);
 
                 await booking.Save(_bookingRepository);
 
@@ -76,7 +86,16 @@ namespace Application.Booking
                     Message = "Guest is a required information"
                 };
             }
-            catch (Exception)
+            catch (RoomCannotBeBookedException)
+            {
+                return new BookingResponse
+                {
+                    Success = false,
+                    ErrorCode = ErrorCodes.BOOKING_ROOM_CANNOT_BE_BOOKED,
+                    Message = "The Selected Room is not available"
+                };
+            }
+            catch (Exception ex)
             {
                 return new BookingResponse
                 {

@@ -24,6 +24,7 @@
         BOOKING_MISSING_REQUIRED_INFORMATION = 203,
         BOOKING_INVALID_EMAIL = 204,
         BOOKING_GUEST_NOT_FOUND = 205,
+        BOOKING_ROOM_CANNOT_BE_BOOKED = 206,
     }
 
     public abstract class Response

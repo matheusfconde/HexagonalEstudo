@@ -64,12 +64,18 @@ namespace Domain.Entities
                 throw new GuestIsRequiredException();
             }
 
-            this.Guest.IsValid();    
         }
 
         public async Task Save(IBookingRepository bookingRepository)
         {
             this.ValidateState();
+
+            this.Guest.IsValid();
+
+            if (!this.Room.CanBeBooked())
+            {
+                throw new RoomCannotBeBookedException();
+            }
 
             if (this.Id == 0)
             {
