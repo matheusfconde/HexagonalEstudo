@@ -17,10 +17,17 @@ namespace Data.Room
             return room.Id;
         }
 
-
         public Task<Domain.Entities.Room?> Get(int Id)
         {
-            return _hotelDbContext.Rooms.Where(g => g.Id == Id).FirstOrDefaultAsync();
+            return _hotelDbContext.Rooms
+                .Where(g => g.Id == Id).FirstAsync();
+        }
+
+        public Task<Domain.Entities.Room?> GetAggreagate(int Id)
+        {
+            return _hotelDbContext.Rooms
+                .Include(r => r.Bookings)
+                .Where(g => g.Id == Id).FirstAsync();
         }
     }
 }

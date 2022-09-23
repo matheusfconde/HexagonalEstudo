@@ -4,7 +4,8 @@ namespace Domain.Ports
 {
     public interface IRoomRepository
     {
-        Task<Room?> Get(int Id);
-        Task<int> Create(Room room);
+        Task<Entities.Room?> Get(int Id);
+        Task<Domain.Entities.Room?> GetAggreagate(int Id);
+        Task<int> Create(Entities.Room room);
     }
 }
