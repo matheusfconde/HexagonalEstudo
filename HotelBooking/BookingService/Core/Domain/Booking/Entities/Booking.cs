@@ -20,9 +20,9 @@ namespace Domain.Entities
         public Room Room { get; set; }
         public Guest Guest { get; set; }
 
-        private Status Status { get; set; }
+        public Status Status { get; set; }
 
-        public Status CurrentStatus { get { return this.Status; } }
+        //public Status CurrentStatus { get { return this.Status; } }
 
         public void ChangeState(Action action)
         {
