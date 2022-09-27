@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Application.Payment.DTO;
+using Application.Responses;
 
 namespace Application.Payment.Responses
 {
-    internal class PaymentResponse
+    public class PaymentResponse : Response
     {
+        public PaymentStateDto Data { get; set; }
     }
 }

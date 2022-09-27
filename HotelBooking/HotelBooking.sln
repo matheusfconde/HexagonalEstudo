@@ -45,7 +45,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{C27CFED3-90A1-4853-B4D1-E0AF6EF244D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payments.Application", "PaymentService\Core\Application\Application\Payments.Application.csproj", "{350525ED-95D4-48EA-AE1A-1862286FD14E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Payments.Application", "PaymentService\Core\Application\Application\Payments.Application.csproj", "{350525ED-95D4-48EA-AE1A-1862286FD14E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6CB92518-BD88-49D3-AF7B-2FD3191862DD} = {6CB92518-BD88-49D3-AF7B-2FD3191862DD}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

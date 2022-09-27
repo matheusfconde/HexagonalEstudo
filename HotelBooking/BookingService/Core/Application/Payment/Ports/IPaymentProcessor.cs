@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Application.Payment.Responses;
 
 namespace Application.Payment.Ports
 {
-    internal class IPaymentProcessor
+    public interface IPaymentProcessor
     {
+        Task<PaymentResponse> CapturePayment(string paymentIntention);
     }
 }

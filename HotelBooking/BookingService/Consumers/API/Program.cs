@@ -2,6 +2,7 @@ using Application;
 using Application.Booking;
 using Application.Booking.Ports;
 using Application.Guest.Ports;
+using Application.Payment.Ports;
 using Application.Room.Ports;
 using Data;
 using Data.Booking;
@@ -9,7 +10,7 @@ using Data.Guest;
 using Data.Room;
 using Domain.Ports;
 using Microsoft.EntityFrameworkCore;
-
+using Payments.Application;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,6 +25,7 @@ builder.Services.AddScoped<IRoomManager, RoomManager>();
 builder.Services.AddScoped<IRoomRepository, RoomRepository>();
 builder.Services.AddScoped<IBookingManager, BookingManager>();
 builder.Services.AddScoped<IBookingRepository, BookingRepository>();
+builder.Services.AddScoped<IPaymentProcessorFactory, PaymentProcessorFactory>();
 
 #endregion
 

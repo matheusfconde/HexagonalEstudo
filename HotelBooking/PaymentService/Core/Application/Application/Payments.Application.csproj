@@ -7,9 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="MercadoPago\" />
     <Folder Include="Paypal\" />
     <Folder Include="Stripe\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\BookingService\Core\Application\Application.csproj" />
   </ItemGroup>
 
 </Project>

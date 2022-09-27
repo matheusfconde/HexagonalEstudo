@@ -41,6 +41,7 @@ namespace Domain.Entities
             this.ValidadeState();
             return true;
         }
+
         public async Task Save(IGuestRepository guestRepository)
         {
             this.ValidadeState();
