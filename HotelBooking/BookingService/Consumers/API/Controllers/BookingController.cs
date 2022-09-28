@@ -2,7 +2,10 @@
 using Application.Booking.Ports;
 using Application.Payment.Responses;
 using Application.Responses;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using MediatR;
+using Application.Booking.Commands;
 
 namespace API.Controllers
 {
@@ -12,18 +15,21 @@ namespace API.Controllers
     {
         private readonly ILogger<BookingController> _logger;
         private readonly IBookingManager _bookingManager;
+        private readonly IMediator _mediator;
 
-        public BookingController(ILogger<BookingController> logger, IBookingManager bookingManager)
+        public BookingController(ILogger<BookingController> logger, IBookingManager bookingManager, IMediator mediator)
         {
             _logger = logger;
             _bookingManager = bookingManager;
+            _mediator = mediator;
         }
 
         [HttpPost]
         [Route("{bookingId}/Pay")]
-        public async Task<ActionResult<PaymentResponse>> Pay( PaymentRequestDto paymentRequestDto, int bookingId)
+        public async Task<ActionResult<PaymentResponse>> Pay(PaymentRequestDto paymentRequestDto, int bookingId)
         {
             paymentRequestDto.BookingId = bookingId;
+
             var res = await _bookingManager.PayForABooking(paymentRequestDto);
 
             if (res.Success) return Ok(res.Data);
@@ -34,7 +40,14 @@ namespace API.Controllers
         [HttpPost]
         public async Task<ActionResult<BookingDTO>> Post(BookingDTO booking)
         {
-            var res = await _bookingManager.CreateBooking(booking);
+            var command = new CreateBookingCommand
+            {
+                BookingDTO = booking,
+            };
+
+            //var res = await _bookingManager.CreateBooking(booking); // utilizava a porta
+
+            var res = await _mediator.Send(command); //agora utilizando o mediatR;
 
             if (res.Success) return Created("", res.Data);
 
@@ -51,7 +64,7 @@ namespace API.Controllers
 
             else if (res.ErrorCode == ErrorCodes.BOOKING_ROOM_CANNOT_BE_BOOKED)
 
-            _logger.LogError("Response with unknown ErrorCode Returned", res);
+                _logger.LogError("Response with unknown ErrorCode Returned", res);
 
             return BadRequest(500);
 
