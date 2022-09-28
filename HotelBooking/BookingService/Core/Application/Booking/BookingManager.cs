@@ -14,7 +14,7 @@ namespace Application.Booking
         private readonly IBookingRepository _bookingRepository;
         private readonly IRoomRepository _roomRepository;
         private readonly IGuestRepository _guestRepository;
-        private readonly IPaymentProcessorFactory _paymentProcessorFactory;
+        private readonly IPaymentProcessorFactory _paymentProcessorFactory;        
 
         public BookingManager(IBookingRepository bookingRepository,
             IRoomRepository roomRepository,
