@@ -6,6 +6,7 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using MediatR;
 using Application.Booking.Commands;
+using Application.Booking.Queries;
 
 namespace API.Controllers
 {
@@ -64,10 +65,24 @@ namespace API.Controllers
 
             else if (res.ErrorCode == ErrorCodes.BOOKING_ROOM_CANNOT_BE_BOOKED)
 
-                _logger.LogError("Response with unknown ErrorCode Returned", res);
-
+            _logger.LogError("Response with unknown ErrorCode Returned", res);
             return BadRequest(500);
+        }
 
+        [HttpGet]
+        public async Task<ActionResult<BookingDTO>> Get(int id)
+        {
+            var query = new GetBookingQuery
+            {
+                Id = id
+            };
+
+            var res = await _mediator.Send(query);
+
+            if (res.Success) return Created("", res.Data);
+
+            _logger.LogError("Could not process the request", res);
+            return BadRequest(res);
         }
     }
 }
